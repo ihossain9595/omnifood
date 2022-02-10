@@ -6,6 +6,8 @@
 
 - Font weights:
 Default: 400
+500
+600
 700
 
 - Line heights:
@@ -33,6 +35,8 @@ Default: 1
 /*
 --- 06 BORDER-RADIUS
 --
+50%
+9px 
 */
 
 /*
@@ -61,14 +65,65 @@ body {
   color: #555;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.header_logo {
+  height: 2.2rem;
+}
+
+.header_navbar-main {
+}
+.header_navbar-lists {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.header_navbar-link:link,
+.header_navbar-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.header_navbar-link:hover,
+.header_navbar-link:active {
+  color: #e67e22;
+}
+
+.header_navbar-link.header_navbar-link-cta:link,
+.header_navbar-link.header_navbar-link-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.header_navbar-link.header_navbar-link-cta:hover,
+.header_navbar-link.header_navbar-link-cta:active {
+  background-color: #cf711f;
+}
+
 .section-hero {
   background-color: #fdf2e9;
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 9.6rem 0;
 }
 
 .hero {
   max-width: 130rem;
   margin: 0 auto;
+  padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
