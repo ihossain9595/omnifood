@@ -26,7 +26,7 @@ Default: 1px
 --- 02 COLORS
 --
 - Primary: #e67e22
-- Greys: #555 #333
+- Greys: #888 #555 #333 
 - Accents: 
 
 - Tints: #fdf2e9 #fae5d3
@@ -243,6 +243,37 @@ body {
 .hero_delivered-text-color {
   color: #e67e22;
   font-weight: 700;
+}
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.featured {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.featured__title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  color: #888;
+  margin-bottom: 2.4rem;
+}
+
+.featured__logos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.featured__logo {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
 }
 
 .section-how {
