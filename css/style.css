@@ -26,7 +26,7 @@ Default: 1px
 --- 02 COLORS
 --
 - Primary: #e67e22
-- Greys: #888 #555 #333 
+- Greys: #888 #6f6f6f #555 #333 
 - Accents: 
 
 - Tints: #fdf2e9 #fae5d3
@@ -72,13 +72,68 @@ body {
   color: #555;
 }
 
+/* -------------------------------------------------- */
+/* ---------------------------------------- */
+/* ------------------------------ */
+/* Reusable Components */
+.fixed-container-1200 {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.padding-96-0 {
+  padding: 9.6rem 0;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--column-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.heading-h1 {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-h2 {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-h3 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: #cf711f;
+  margin-bottom: 1.6rem;
+}
+/* Reusable Components */
+/* ------------------------------ */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
+
 .hero {
   max-width: 130rem;
   padding: 0 3.2rem;
   margin: 0 auto;
 }
 
-.featured,
 .how,
 .meals {
   max-width: 120rem;
@@ -239,31 +294,38 @@ body {
   font-weight: 700;
 }
 
-/* ----- Featured ----- */
+/* -------------------------------------------------- */
+/* ---------------------------------------- */
+/* ------------------------------ */
+/* Featured */
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
 }
 
-.featured__title {
+.featuredgig-heading-h2 {
   font-size: 1.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
   font-weight: 500;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
   text-align: center;
   color: #888;
   margin-bottom: 2.4rem;
 }
 
-.featured__logos {
+.featured-logos {
   display: flex;
   justify-content: space-between;
 }
 
-.featured__logo {
+.featured-logo {
   height: 3.2rem;
   filter: brightness(0);
   opacity: 50%;
 }
+/* Featured */
+/* ------------------------------ */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
 
 /* ----- How ----- */
 .section-how {
@@ -493,3 +555,68 @@ body {
   color: #cf711f;
   border-bottom: 1px solid transparent;
 }
+
+/* -------------------------------------------------- */
+/* ---------------------------------------- */
+/* ------------------------------ */
+/* Testimonials & Gallery */
+.section-testimonials-gallery {
+  background-color: #fae5d3;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-image {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8em;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-image-container {
+  overflow: hidden;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.4s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1);
+}
+/* Testimonials & Gallery */
+/* ------------------------------ */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
