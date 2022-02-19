@@ -96,6 +96,14 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.heading-h1,
+.heading-h2,
+.heading-h3 {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
 .heading-h1 {
   font-size: 5.2rem;
   line-height: 1.05;
@@ -134,7 +142,6 @@ body {
   margin: 0 auto;
 }
 
-.how,
 .meals {
   max-width: 120rem;
   padding: 0 3.2rem;
@@ -302,7 +309,7 @@ body {
   padding: 4.8rem 0 3.2rem 0;
 }
 
-.featuredgig-heading-h2 {
+.featured-heading-h2 {
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.75px;
@@ -327,97 +334,62 @@ body {
 /* ---------------------------------------- */
 /* -------------------------------------------------- */
 
-/* ----- How ----- */
-.section-how {
-  padding: 9.6rem 0;
-}
-
-.how_sub-title,
-.meals_sub-title {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  letter-spacing: 0.75px;
-  text-transform: uppercase;
-  color: #e67e22;
-  margin-bottom: 1.6rem;
-}
-
-.how_main-title,
-.meals_main-title {
-  font-size: 4.4rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-  color: #333;
-  margin-bottom: 9.6rem;
-}
-
-.how.how-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 6.4rem;
-  row-gap: 9.6rem;
-}
-
-.how_step-text-box {
+/* -------------------------------------------------- */
+/* ---------------------------------------- */
+/* ------------------------------ */
+/* How */
+.how-text-container {
   align-self: center;
 }
 
-.how_step-number {
+.how-number {
   font-size: 8.6rem;
   font-weight: 600;
   color: #ddd;
   margin-bottom: 1.2rem;
 }
 
-.how_step-title,
-.meals_diet-title {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-  color: #333;
-  margin-bottom: 3.2rem;
-}
-
-.how_step-description {
+.how-description {
   font-size: 1.8rem;
   line-height: 1.8;
 }
 
-.how_step-image-box {
+.how-image-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.how_step-image-box::before,
-.how_step-image-box::after {
+.how-image-container::before,
+.how-image-container::after {
   content: "";
   display: block;
   position: absolute;
   border-radius: 50%;
 }
 
-.how_step-image-box::before {
+.how-image-container::before {
   width: 60%;
   padding-bottom: 60%;
   background-color: #fdf2e9;
   z-index: -1;
 }
 
-.how_step-image-box::after {
+.how-image-container::after {
   width: 50%;
   padding-bottom: 50%;
   background-color: #fae5d3;
   z-index: -1;
 }
 
-.how_step-image {
+.how-image {
   width: 35%;
 }
+/* How */
+/* ------------------------------ */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
 
 /* ----- Meals ----- */
 .section-meals {
