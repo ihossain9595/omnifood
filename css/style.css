@@ -91,7 +91,7 @@ body {
 }
 
 .margin-bottom--48 {
-  margin-bottom: 4.8rem;
+  margin-bottom: 4.8rem !important;
 }
 
 .grid {
@@ -110,6 +110,10 @@ body {
 
 .grid--column-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--column-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .lists {
@@ -602,7 +606,7 @@ body {
 /* -------------------------------------------------- */
 /* ---------------------------------------- */
 /* ------------------------------ */
-/* Pricing */
+/* Pricing & Features */
 .plan_container {
   width: 75%;
   border-radius: 11px;
@@ -671,7 +675,35 @@ body {
 .plan_btn-container {
   text-align: center;
 }
-/* Pricing */
+
+.details_text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature_icon {
+  background-color: #fdf2e9;
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+
+.feature_title {
+  color: #333;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature_text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+/* Pricing & Features */
 /* ------------------------------ */
 /* ---------------------------------------- */
 /* -------------------------------------------------- */
