@@ -82,8 +82,16 @@ body {
   margin: 0 auto;
 }
 
-.padding-96-0 {
+.padding--96-0 {
   padding: 9.6rem 0;
+}
+
+.text-align--center {
+  text-align: center;
+}
+
+.margin-bottom--48 {
+  margin-bottom: 4.8rem;
 }
 
 .grid {
@@ -92,8 +100,36 @@ body {
   row-gap: 9.6rem;
 }
 
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
 .grid--column-2 {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--column-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.lists {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.list {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
 }
 
 .heading-h1,
@@ -225,7 +261,7 @@ body {
   margin-bottom: 4.8rem;
 }
 
-.hero_btn-box {
+.hero_btn-container {
   display: flex;
   gap: 1.6rem;
   margin-bottom: 8rem;
@@ -242,25 +278,25 @@ body {
   transition: all 0.3s;
 }
 
-.hero_btn-main:link,
-.hero_btn-main:visited {
+.btn-main:link,
+.btn-main:visited {
   background-color: #e67e22;
   color: #fff;
 }
 
-.hero_btn-main:hover,
-.hero_btn-main:active {
+.btn-main:hover,
+.btn-main:active {
   background-color: #cf711f;
 }
 
-.hero_btn-secondary:link,
-.hero_btn-secondary:visited {
+.btn-secondary:link,
+.btn-secondary:visited {
   background-color: #fff;
   color: #555;
 }
 
-.hero_btn-secondary:hover,
-.hero_btn-secondary:active {
+.btn-secondary:hover,
+.btn-secondary:active {
   background-color: #fdf2e9;
   box-shadow: inset 0 0 0 3px #fff;
 }
@@ -305,11 +341,11 @@ body {
 /* ---------------------------------------- */
 /* ------------------------------ */
 /* Featured */
-.section-featured {
+.section_featured {
   padding: 4.8rem 0 3.2rem 0;
 }
 
-.featured-heading-h2 {
+.featured_heading-h2 {
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.75px;
@@ -319,12 +355,12 @@ body {
   margin-bottom: 2.4rem;
 }
 
-.featured-logos {
+.featured_logos {
   display: flex;
   justify-content: space-between;
 }
 
-.featured-logo {
+.featured_logo {
   height: 3.2rem;
   filter: brightness(0);
   opacity: 50%;
@@ -338,52 +374,52 @@ body {
 /* ---------------------------------------- */
 /* ------------------------------ */
 /* How */
-.how-text-container {
+.how_text-container {
   align-self: center;
 }
 
-.how-number {
+.how_number {
   font-size: 8.6rem;
   font-weight: 600;
   color: #ddd;
   margin-bottom: 1.2rem;
 }
 
-.how-description {
+.how_description {
   font-size: 1.8rem;
   line-height: 1.8;
 }
 
-.how-image-container {
+.how_image-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.how-image-container::before,
-.how-image-container::after {
+.how_image-container::before,
+.how_image-container::after {
   content: "";
   display: block;
   position: absolute;
   border-radius: 50%;
 }
 
-.how-image-container::before {
+.how_image-container::before {
   width: 60%;
   padding-bottom: 60%;
   background-color: #fdf2e9;
   z-index: -1;
 }
 
-.how-image-container::after {
+.how_image-container::after {
   width: 50%;
   padding-bottom: 50%;
   background-color: #fae5d3;
   z-index: -1;
 }
 
-.how-image {
+.how_image {
   width: 35%;
 }
 /* How */
@@ -391,51 +427,37 @@ body {
 /* ---------------------------------------- */
 /* -------------------------------------------------- */
 
-/* ----- Meals ----- */
-.section-meals {
-  padding: 9.6rem 0;
-}
-
-.meals_sub-title,
-.meals_main-title {
-  text-align: center;
-}
-
-.meals.meals-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 6.4rem;
-  row-gap: 9.6rem;
-  margin-bottom: 4.8rem;
-}
-
-.meals_meal-box {
+/* -------------------------------------------------- */
+/* ---------------------------------------- */
+/* ------------------------------ */
+/* Meals */
+.meal_container {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
   transition: all 0.4s;
 }
 
-.meals_meal-box:hover {
+.meal_container:hover {
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
   transform: translateY(-2rem);
 }
 
-.meals_meal-image {
+.meal_image {
   width: 100%;
 }
 
-.meals_meal-text-box {
+.meal_text-container {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
 }
 
-.meals-meal-tags {
+.meal_tags {
   margin-bottom: 1.2rem;
   display: flex;
   gap: 0.4rem;
 }
 
-.meals_meal-tag {
+.meal_tag {
   display: inline-block;
   padding: 0.4rem 0.8rem;
   font-size: 1.2rem;
@@ -445,76 +467,56 @@ body {
   border-radius: 100px;
 }
 
-.meals_meal-tag--vegetarian {
+.meal_tag--vegetarian {
   background-color: #51cf66;
 }
 
-.meals_meal-tag--vegan {
+.meal_tag--vegan {
   background-color: #94d82d;
 }
 
-.meals_meal-tag--paleo {
+.meal_tag--paleo {
   background-color: #ffd43b;
 }
 
-.meals_meal-title {
+.meal_title {
   font-size: 2.4rem;
   font-weight: 600;
   color: #333;
   margin-bottom: 3.2rem;
 }
 
-.meals_meal-lists {
+.meal_lists {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.meals_meal-list {
+.meal_list {
   font-size: 1.8rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
 }
 
-.meals_meal-icon {
+.meal_icon {
   height: 2.4rem;
   width: 2.4rem;
   color: #e67e22;
 }
 
-.meals_meal-icon-text-highlight {
+.meal_icon-highlight {
   font-weight: 500;
 }
 
-.meals_diet-lists {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-
-.meals_diet-list {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-}
-
-.meals_diet-icon {
-  width: 3rem;
-  height: 3rem;
-  color: #e67e22;
-}
-
-.meals_link-box {
+.link_container-2 {
   text-align: center;
   font-size: 1.8rem;
 }
 
-.meals_link:link,
-.meals_link:visited {
+.link_link:link,
+.link_link:visited {
   color: #e67e22;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
@@ -522,24 +524,28 @@ body {
   transition: all 0.3s;
 }
 
-.meals_link:hover,
-.meals_link:active {
+.link_link:hover,
+.link_link:active {
   color: #cf711f;
   border-bottom: 1px solid transparent;
 }
+/* Meals */
+/* ------------------------------ */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
 
 /* -------------------------------------------------- */
 /* ---------------------------------------- */
 /* ------------------------------ */
 /* Testimonials & Gallery */
-.section-testimonials-gallery {
+.section_testimonials-gallery {
   background-color: #fae5d3;
   display: grid;
   grid-template-columns: 55fr 45fr;
   align-items: center;
 }
 
-.testimonials-container {
+.testimonials_container {
   padding: 9.6rem;
 }
 
@@ -550,45 +556,122 @@ body {
   column-gap: 8rem;
 }
 
-.testimonial-image {
+.testimonial_image {
   width: 6.4rem;
   border-radius: 50%;
   margin-bottom: 1.2rem;
 }
 
-.testimonial-text {
+.testimonial_text {
   font-size: 1.8em;
   line-height: 1.8;
   margin-bottom: 1.6rem;
 }
 
-.testimonial-name {
+.testimonial_name {
   font-size: 1.6rem;
   color: #6f6f6f;
 }
 
-.gallery-container {
+.gallery_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
   padding: 1.6rem;
 }
 
-.gallery-image-container {
+.gallery_image-container {
   overflow: hidden;
 }
 
-.gallery-image {
+.gallery_image {
   display: block;
   width: 100%;
   height: auto;
   transition: all 0.4s;
 }
 
-.gallery-image:hover {
+.gallery_image:hover {
   transform: scale(1.1);
 }
 /* Testimonials & Gallery */
+/* ------------------------------ */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
+
+/* -------------------------------------------------- */
+/* ---------------------------------------- */
+/* ------------------------------ */
+/* Pricing */
+.plan_container {
+  width: 75%;
+  border-radius: 11px;
+}
+
+.plan--starter {
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+  padding: 4.6rem;
+}
+
+.plan--complete {
+  position: relative;
+  overflow: hidden;
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+}
+
+.plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  background-color: #ffd43b;
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  padding: 0.8rem 8rem;
+}
+
+.plan_header {
+  text-align: center;
+  margin-bottom: 4.8em;
+}
+
+.plan_name {
+  color: #cf711f;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.75;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+}
+
+.plan_price {
+  color: #333;
+  font-size: 6.2rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+.plan_symbol {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan_text {
+  color: #6f6f6f;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.plan_btn-container {
+  text-align: center;
+}
+/* Pricing */
 /* ------------------------------ */
 /* ---------------------------------------- */
 /* -------------------------------------------------- */
