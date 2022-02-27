@@ -231,19 +231,10 @@ body {
 /* ---------------------------------------- */
 /* -------------------------------------------------- */
 
-.hero {
-  max-width: 130rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
-}
-
-.meals {
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
-}
-
-/* ----- Header ----- */
+/* -------------------------------------------------- */
+/* ---------------------------------------- */
+/* ------------------------------ */
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -291,27 +282,28 @@ body {
 .header_navbar-link.header_navbar-link-cta:active {
   background-color: #cf711f;
 }
+/* Header */
+/* ------------------------------ */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
 
-/* ----- Hero ----- */
+/* -------------------------------------------------- */
+/* ---------------------------------------- */
+/* ------------------------------ */
+/* Hero */
 .section-hero {
   background-color: #fdf2e9;
   padding: 4.8rem 0 9.6rem 0;
 }
 
-.hero.hero-grid {
+.hero_container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 9.6rem;
-}
-
-.hero_title {
-  font-size: 5.2rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #333;
-  line-height: 1.05;
-  margin-bottom: 3.2rem;
 }
 
 .hero_description {
@@ -326,21 +318,17 @@ body {
   margin-bottom: 8rem;
 }
 
-.hero_image {
-  width: 100%;
-}
-
-.hero_delivered-meals-box {
+.hero_delivered-container {
   display: flex;
   align-items: center;
   gap: 1.6rem;
 }
 
-.hero_delivered-images {
+.delivered_images {
   display: flex;
 }
 
-.hero_delivered-image {
+.delivered_image {
   height: 4.8rem;
   width: 4.8rem;
   border: 3px solid #fdf2e9;
@@ -348,19 +336,27 @@ body {
   margin-right: -1.6rem;
 }
 
-.hero_delivered-image:last-child {
+.delivered_image:last-child {
   margin-right: 0;
 }
 
-.hero_delivered-text {
+.delivered_text {
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.hero_delivered-text-color {
+.delivered_color {
   color: #e67e22;
   font-weight: 700;
 }
+
+.hero_image {
+  width: 100%;
+}
+/* Hero */
+/* ------------------------------ */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
 
 /* -------------------------------------------------- */
 /* ---------------------------------------- */
