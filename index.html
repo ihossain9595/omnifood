@@ -57,7 +57,7 @@
       </section>
 
       <section class="section_featured">
-        <div class="featured_container fixed-container-1200">
+        <div class="featured_container fixed-container--1200">
           <h2 class="featured_heading-h2">As featured in</h2>
           <div class="featured_logos">
             <img class="featured_logo" src="img/logos/techcrunch.png" alt="techcrunch logo" />
@@ -69,12 +69,12 @@
         </div>
       </section>
 
-      <section class="section_how padding-96-0">
-        <div class="how_container fixed-container-1200">
+      <section class="section_how padding--96-0">
+        <div class="how_container fixed-container--1200">
           <span class="subheading"> How it works</span>
           <h2 class="heading-h2">Your daily dose of health in 3 simple steps</h2>
         </div>
-        <div class="how_container fixed-container-1200 grid grid--column-2">
+        <div class="how_container fixed-container--1200 grid grid--column-2">
           <!-- Step 01 -->
           <div class="how_text-container">
             <p class="how_number">01</p>
@@ -108,12 +108,12 @@
       </section>
 
       <section class="section_meals padding--96-0">
-        <div class="meals_container fixed-container-1200">
+        <div class="meals_container fixed-container--1200">
           <span class="subheading text-align--center">Meals</span>
           <h2 class="heading-h2 text-align--center">Omnifood AI chooses from 5,000+ recipes</h2>
         </div>
 
-        <div class="meals_container fixed-container-1200 grid grid--column-3 margin-bottom--48">
+        <div class="meals_container fixed-container--1200 grid grid--column-3 margin-bottom--48">
           <div class="meal_container">
             <img class="meal_image" src="img/meals/meal-1.jpg" alt="Japanese Gyozas" />
             <div class="meal_text-container">
@@ -251,11 +251,11 @@
       </section>
 
       <section class="section_pricing-features padding--96-0">
-        <div class="pricing_container fixed-container-1200">
+        <div class="pricing_container fixed-container--1200">
           <span class="subheading">Pricing</span>
           <h2 class="heading-h2">Eating well without breaking the bank</h2>
         </div>
-        <div class="pricing_container fixed-container-1200 margin-bottom--48 grid grid--column-2">
+        <div class="pricing_container fixed-container--1200 margin-bottom--48 grid grid--column-2">
           <div class="plan_container plan--starter">
             <header class="plan_header">
               <p class="plan_name">Starter</p>
@@ -295,11 +295,11 @@
           </div>
         </div>
 
-        <div class="details_container fixed-container-1200 grid">
+        <div class="details_container fixed-container--1200 grid">
           <aside class="details_text">Prices include all applicable taxes. You can cancel at any time.Both plans include the following:</aside>
         </div>
 
-        <div class="features_container fixed-container-1200 grid grid--column-4">
+        <div class="features_container fixed-container--1200 grid grid--column-4">
           <div class="feature_container">
             <ion-icon class="feature_icon" name="infinite-outline"></ion-icon>
             <p class="feature_title">Never cook again!</p>
@@ -322,6 +322,44 @@
           </div>
         </div>
       </section>
+
+      <!-- --------------------------------------------- -->
+      <!-- -------------------- CTA -------------------- -->
+      <section class="section-cta padding--96-0">
+        <div class="fixed-container--1200">
+          <div class="cta_container">
+            <div class="cta_text-container">
+              <div class="heading-h2">Get your first meal for free!</div>
+              <p class="cta_text">Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!</p>
+              <form class="form_container" action="#">
+                <div>
+                  <label for="full-name">Full Name</label>
+                  <input id="full-name" type="text" placeholder="John Smith" required />
+                </div>
+                <div>
+                  <label for="email">Email Address</label>
+                  <input id="email" type="email" placeholder="me@example.com" required />
+                </div>
+                <div>
+                  <label for="select-where">Where did you hear about us?</label>
+                  <select name="" id="select-where" required>
+                    <option value="">Please choose one option</option>
+                    <option value="friends">Friends and family</option>
+                    <option value="youtube">YouTube video</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="ad">Facebook ad</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+                <button class="btn btn-form">Sign up now</button>
+              </form>
+            </div>
+            <div class="cta_image-container" role="img" aria-label="Men enjoying food"></div>
+          </div>
+        </div>
+      </section>
+      <!-- -------------------- CTA -------------------- -->
+      <!-- --------------------------------------------- -->
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
