@@ -13,8 +13,9 @@ Default: 400
 - Line heights:
 Default: 1
 1.05
-1.6
 1.2
+1.6
+1.8
 
 - Letter spacing:
 Default: 1px
@@ -53,6 +54,10 @@ Default: 1px
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
+/* -------------------------------------------------- */
+/* ---------------------------------------- */
+/* ------------------------------ */
+/* General Components */
 * {
   padding: 0;
   margin: 0;
@@ -63,6 +68,7 @@ html {
   /* font-size: 10px; */
   /* 10px / 16px = 0.625 = 62.5% */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -70,7 +76,12 @@ body {
   font-weight: 400;
   line-height: 1;
   color: #555;
+  overflow-x: hidden;
 }
+/* General Components */
+/* ------------------------------ */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
 
 /* -------------------------------------------------- */
 /* ---------------------------------------- */
@@ -132,6 +143,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .icon {
@@ -246,6 +258,7 @@ body {
   background-color: #fdf2e9;
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .header_logo {
@@ -256,7 +269,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 
 .header_navbar-link:link,
@@ -285,6 +298,23 @@ body {
 .header_navbar-link.header_navbar-link-cta:hover,
 .header_navbar-link.header_navbar-link-cta:active {
   background-color: #cf711f;
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-nav_icon {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.mobile-nav_icon[name="close-outline"] {
+  display: none;
 }
 /* Header */
 /* ------------------------------ */
@@ -894,6 +924,286 @@ body {
 }
 
 /* Footer */
+/* ------------------------------ */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
+
+/* -------------------------------------------------- */
+/* ---------------------------------------- */
+/* ------------------------------ */
+/* Media Queries */
+/* Below 1344px */
+@media (max-width: 84em) {
+  .hero_container {
+    max-width: 120rem;
+  }
+
+  .heading-h1 {
+    font-size: 4.4rem;
+  }
+
+  .gallery_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Below 1200px */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .heading-h2 {
+    font-size: 3.6rem;
+  }
+
+  .heading-h3 {
+    font-size: 2.4rem;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .hero_container {
+    gap: 4.8rem;
+  }
+
+  .header_navbar-lists {
+    gap: 3.2rem;
+  }
+
+  .testimonials_container {
+    padding: 9.6rem 3.2rem;
+  }
+}
+
+/* Below 944px */
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .hero_container {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+    padding: 0 8rem;
+  }
+
+  .hero_image {
+    width: 60%;
+  }
+
+  .hero_text-container,
+  .hero_image-container {
+    text-align: center;
+  }
+
+  .hero_delivered-container {
+    justify-content: center;
+  }
+
+  .hero_btn-container {
+    margin-bottom: 3.2rem;
+  }
+
+  .featured_logo {
+    height: 2.4rem;
+  }
+
+  .how_number {
+    font-size: 7.4rem;
+  }
+
+  .meal_text-container {
+    padding: 2.4rem 3.2rem 2.4rem 3.2rem;
+  }
+
+  .section_testimonials-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery_container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cta_container {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .form_container {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-form {
+    margin-top: 1.2rem;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .header_navbar {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav-open .header_navbar {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .header_navbar-lists {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .header_navbar-link:link,
+  .header_navbar-link:visited {
+    font-size: 3.2rem;
+  }
+
+  .nav-open .mobile-nav_icon[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .mobile-nav_icon[name="menu-outline"] {
+    display: none;
+  }
+
+  .hero_btn-container {
+    justify-content: center;
+  }
+}
+
+/* Below 704px */
+@media (max-width: 44em) {
+  .grid--column-3,
+  .grid--column-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diet_container {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .heading-h2 {
+    margin-bottom: 4.8rem;
+  }
+
+  .plan_container {
+    width: 100%;
+  }
+
+  .grid-footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .footer_nav-container {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .footer_logo-container {
+    grid-column: span 3;
+  }
+  .footer_contact-container {
+    grid-column: span 3;
+  }
+}
+
+/* Below 544px */
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--column-2,
+  .grid--column-3,
+  .grid--column-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero_container {
+    padding: 0 3.2rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .hero_image {
+    width: 80%;
+  }
+
+  .featured_logo {
+    height: 1.2rem;
+  }
+
+  .how_image-container:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .how_image-container:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .how_image-container {
+    transform: translateY(2.4rem);
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery_container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .cta_container {
+    grid-template-columns: 1fr;
+  }
+
+  .cta_text-container {
+    padding: 3.2rem;
+  }
+
+  .cta_image-container {
+    height: 32rem;
+    grid-row: 1;
+  }
+}
+/* Media Queries */
 /* ------------------------------ */
 /* ---------------------------------------- */
 /* -------------------------------------------------- */
