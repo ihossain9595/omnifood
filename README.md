@@ -1,3 +1,5 @@
+<div id="top"></div>
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -17,16 +19,9 @@
 <h3 align="center">Omnifood</h3>
 
   <p align="center">
-    Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs.
+    An AI-powered food subscription that will make you eat healthy again.
     <br />
     <a href="https://github.com/ihossain9595/omnifood"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/ihossain9595/omnifood">View Demo</a>
-    ·
-    <a href="https://github.com/ihossain9595/omnifood/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/ihossain9595/omnifood/issues">Request Feature</a>
   </p>
 </div>
 
