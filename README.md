@@ -39,9 +39,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Omnifood Screen Shot][product-screenshot]]
+![Omnifood Screen Shot][product-screenshot]
 
-Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs.
+Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs.<br />
 PS - This is the first website that I have created. Thanks to Jonas Schmedtmann (@jonasschmedtman).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
